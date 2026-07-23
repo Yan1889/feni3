@@ -10,8 +10,4 @@ export default defineConfig({
         tailwindcss(),
         babel({ presets: [reactCompilerPreset()] }),
     ],
-    build: {
-        outDir: "../feni3-api/src/main/resources/static",
-        emptyOutDir: true,
-    },
 });

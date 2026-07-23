@@ -2,3 +2,6 @@
 .idea
 node_modules
 static/*
+.DS_Store
+build/
+bin/

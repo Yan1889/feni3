@@ -1,15 +1,6 @@
 services:
-    gateway:
-        build: ./feni3-gateway
-        image: feni-gateway
-        container_name: feni3-gateway-instance
+    feni-app:
+        build: .
+        image: feni3-fat
         ports:
-            - "8080:80"
-    nginx-html-server:
-        build: ./feni3-ui
-        image: feni-ui
-        container_name: feni-ui-instance
-    spring-boot-api:
-        build: ./feni3-api
-        image: feni-api
-        container_name: feni-api-instance
+            - "8080:8080"
