@@ -1,6 +1,6 @@
 services:
     feni-app:
         build: .
-        image: feni3-fat
+        image: feni3
         ports:
             - "8080:8080"
