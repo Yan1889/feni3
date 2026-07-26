@@ -10,6 +10,7 @@ RUN npm run build
 
 FROM amazoncorretto:21 AS java_builder
 WORKDIR /build-dir
+RUN dnf install -y findutils
 # dependencies first
 COPY feni3-api/gradle/ gradle/
 COPY feni3-api/gradlew .
@@ -26,5 +27,5 @@ WORKDIR /app
 COPY --from=java_builder /build-dir/build/libs/feni3-0.0.1-SNAPSHOT.jar app.jar
 COPY --from=java_builder /build-dir/train.sh train.sh
 COPY --from=java_builder /build-dir/bus.sh bus.sh
-RUN yum install -y curl jq gawk
+RUN dnf install -y jq gawk
 CMD [ "java", "-jar", "app.jar" ]
