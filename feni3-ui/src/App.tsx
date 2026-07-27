@@ -46,7 +46,7 @@ export default function App() {
                         Busse
                     </p>
                     <br />
-                    <pre className="">{info.train}</pre>
+                    <pre className="">{info.bus}</pre>
                 </div>
             </div>
             <div className="m-5 p-5 h-fit  bg-red-300 rounded-2xl">
