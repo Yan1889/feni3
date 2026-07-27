@@ -5,7 +5,7 @@ export default function App() {
 
     useEffect(() => {
         async function update() {
-            const res = await fetch("http://localhost:8080/api/mvv");
+            const res = await fetch("https://feni.yan1.de/api/mvv");
             const body = await res.json();
             setTrainInfo([body["trainInfo"], body["busInfo"]]);
         }
