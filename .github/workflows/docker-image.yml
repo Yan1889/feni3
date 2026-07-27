@@ -12,14 +12,14 @@ jobs:
         steps:
             - name: DockerHub login
               run: |
-                  echo ${{secrets.DOCKERHUB_TOKEN}} | docker login
-                  -u ${{secrets.DOCKERHUB_USERNAME}}
+                  echo ${{secrets.DOCKERHUB_TOKEN}} | docker login      \
+                  -u ${{secrets.DOCKERHUB_USERNAME}}                    \
                   --password-stdin
 
             - name: Build Docker image (linux/x86_64)
               run: |
-                  docker buildx build
-                  -t ${{secrets.DOCKERHUB_USERNAME}}/feni-aws:latest
+                  docker buildx build                                   \
+                  -t ${{secrets.DOCKERHUB_USERNAME}}/feni-aws:latest    \
                   --platform linux/x86_64
 
             - name: Push Docker image
