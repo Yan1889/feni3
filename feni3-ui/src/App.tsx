@@ -32,7 +32,6 @@ export default function App() {
 
     return (
         <div className="p-5 bg-yellow-100 w-screen h-screen flex flex-col justify-start items-center">
-            <h1 className="text-6xl">Dashboard</h1>
             <div className="w-full flex flex-row justify-evenly">
                 <div className="m-5 p-5 h-fit  bg-blue-300 rounded-2xl">
                     <p className="text-center text-2xl underline font-bold">
