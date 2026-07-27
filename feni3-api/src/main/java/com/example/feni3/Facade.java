@@ -18,7 +18,7 @@ public class Facade {
 
     @GetMapping("/joke")
     public JokeResponse getJoke() {
-        return restTemplate.getForObject("https://witzapi/api/joke", JokeResponse[].class)[0];
+        return restTemplate.getForObject("https://witzapi.de/api/joke", JokeResponse[].class)[0];
     }
 
     @GetMapping("/mvv")
