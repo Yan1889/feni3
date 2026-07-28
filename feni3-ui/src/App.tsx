@@ -17,12 +17,15 @@ export default function App() {
                 promise_joke,
             ]);
 
-            const body_mvv = await res_mvv.json();
+            const [body_mvv, body_joke] = await Promise.all([
+                res_mvv.json(),
+                res_joke.json(),
+            ]);
 
             setInfo({
                 train: body_mvv["trainInfo"],
                 bus: body_mvv["busInfo"],
-                joke: (await res_joke.json())[0]["text"],
+                joke: body_joke[0]["text"],
             });
         }
         update();
