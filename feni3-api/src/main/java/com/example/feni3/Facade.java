@@ -1,6 +1,5 @@
 package com.example.feni3;
 
-import com.example.feni3.models.JokeResponse;
 import com.example.feni3.models.MVVResponse;
 
 import java.io.IOException;
@@ -15,11 +14,6 @@ import org.springframework.web.client.RestTemplate;
 public class Facade {
 
     RestTemplate restTemplate = new RestTemplate();
-
-    @GetMapping("/joke")
-    public JokeResponse getJoke() {
-        return restTemplate.getForObject("https://witzapi.de/api/joke", JokeResponse[].class)[0];
-    }
 
     @GetMapping("/mvv")
     public MVVResponse getMVV() {

@@ -10,7 +10,7 @@ export default function App() {
     useEffect(() => {
         async function update() {
             const promise_mvv = fetch("https://feni.yan1.de/api/mvv");
-            const promise_joke = fetch("https://feni.yan1.de/api/joke");
+            const promise_joke = fetch("https://witzapi.de/api/joke");
 
             const [res_mvv, res_joke] = await Promise.all([
                 promise_mvv,
@@ -22,7 +22,7 @@ export default function App() {
             setInfo({
                 train: body_mvv["trainInfo"],
                 bus: body_mvv["busInfo"],
-                joke: (await res_joke.json())["text"],
+                joke: (await res_joke.json())[0]["text"],
             });
         }
         update();
