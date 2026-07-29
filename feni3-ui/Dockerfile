@@ -1,12 +1,11 @@
-FROM node:latest AS builder
-WORKDIR /build-dir
+FROM node:26 AS builder
+WORKDIR /build-dir/
 COPY package.json .
 COPY package-lock.json .
 RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx:latest
-COPY --from=builder /build-dir/dist/ /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 8081
+FROM nginx:1.30.4
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=builder /build-dir/dist/ /var/www/html/

@@ -1,6 +1,11 @@
 services:
-    feni-app:
-        build: .
-        image: feni3
-        ports:
-            - "8080:8080"
+    feni-api:
+        build: feni3-api/
+        image: feni-api-image
+        container_name: feni-api-container
+        ports: ["8080:8080"]
+    nginx:
+        build: feni3-ui/
+        image: nginx-image
+        container_name: nginx-container
+        ports: ["80:80"]

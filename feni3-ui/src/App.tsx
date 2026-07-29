@@ -1,31 +1,32 @@
 import { useEffect, useState } from "react";
 
+import image404 from "./assets/image404.png";
+
 export default function App() {
     const [info, setInfo] = useState({
         train: "moment...",
         bus: "moment...",
         joke: "moment...",
+        xkcd_image: image404,
     });
 
     useEffect(() => {
         async function update() {
-            const promise_mvv = fetch("https://feni.yan1.de/api/mvv");
-            const promise_joke = fetch("https://witzapi.de/api/joke");
-
-            const [res_mvv, res_joke] = await Promise.all([
-                promise_mvv,
-                promise_joke,
+            const responses = await Promise.all([
+                fetch("/api/mvv"),
+                fetch("/api/xkcd"),
+                fetch("https://witzapi.de/api/joke"),
             ]);
 
-            const [body_mvv, body_joke] = await Promise.all([
-                res_mvv.json(),
-                res_joke.json(),
-            ]);
+            const [mvv, xkcd, joke] = await Promise.all(
+                responses.map((r) => r.json()),
+            );
 
             setInfo({
-                train: body_mvv["trainInfo"],
-                bus: body_mvv["busInfo"],
-                joke: body_joke[0]["text"],
+                train: mvv["trainInfo"],
+                bus: mvv["busInfo"],
+                joke: joke[0]["text"],
+                xkcd_image: xkcd["img"],
             });
         }
         update();
@@ -51,10 +52,21 @@ export default function App() {
                     <pre className="">{info.bus}</pre>
                 </div>
             </div>
-            <div className="m-5 p-5 h-fit  bg-red-300 rounded-2xl">
-                <p className="text-center text-2xl underline font-bold">Witz</p>
-                <br />
-                <pre className="">{info.joke}</pre>
+            <div className="w-full flex flex-row justify-evenly">
+                <div className="m-5 p-5 h-fit  bg-red-300 rounded-2xl">
+                    <p className="text-center text-2xl underline font-bold">
+                        Witz
+                    </p>
+                    <br />
+                    <pre className="">{info.joke}</pre>
+                </div>
+                <div className="m-5 p-5 h-fit  bg-red-300 rounded-2xl">
+                    <p className="text-center text-2xl underline font-bold">
+                        xkcd
+                    </p>
+                    <br />
+                    <img src={info.xkcd_image} alt="xkcd image" />
+                </div>
             </div>
         </div>
     );
