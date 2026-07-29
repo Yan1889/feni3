@@ -20,11 +20,7 @@ jobs:
                   --password-stdin
 
             - name: Build Docker image (linux/x86_64)
-              run: |
-                  docker buildx build                                   \
-                  -t ${{secrets.DOCKERHUB_USERNAME}}/feni-aws:latest    \
-                  --platform linux/x86_64                               \
-                  .
+              run: docker compose build
 
             - name: Push Docker image
-              run: docker push ${{secrets.DOCKERHUB_USERNAME}}/feni-aws:latest
+              run: docker compose push
