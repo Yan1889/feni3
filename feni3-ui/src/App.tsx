@@ -6,7 +6,7 @@ export default function App() {
     const [info, setInfo] = useState({
         train: "moment...",
         bus: "moment...",
-        joke: "aSDASda A da DS asd asd as dda aSDas asD asdsd das da sd asd as DAS ads asdas ad sa as..",
+        joke: "moment...",
         xkcd_image: image404,
     });
 
