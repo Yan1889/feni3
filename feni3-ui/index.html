@@ -7,25 +7,27 @@
         <title>Dashboard</title>
     </head>
     <body>
-        <div
-            id="ww_4c5698093e19b"
-            v="1.3"
-            loc="id"
-            a='{"t":"responsive","lang":"de","sl_lpl":1,"ids":["wl1545"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_nme":3}'
-        >
-            Mehr Vorhersagen:
-            <a
-                href="https://oneweather.org/de/deutschland/21_tage/"
-                id="ww_4c5698093e19b_u"
-                target="_blank"
-                >Wetter vorhersage 21 tage</a
+        <div class="h-screen flex flex-col">
+            <div
+                id="ww_4c5698093e19b"
+                v="1.3"
+                loc="id"
+                a='{"t":"responsive","lang":"de","sl_lpl":1,"ids":["wl1545"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_nme":3}'
             >
+                Mehr Vorhersagen:
+                <a
+                    href="https://oneweather.org/de/deutschland/21_tage/"
+                    id="ww_4c5698093e19b_u"
+                    target="_blank"
+                    >Wetter vorhersage 21 tage</a
+                >
+            </div>
+            <script
+                async
+                src="https://app3.weatherwidget.org/js/?id=ww_4c5698093e19b"
+            ></script>
+            <div id="root" class="grow"></div>
         </div>
-        <script
-            async
-            src="https://app3.weatherwidget.org/js/?id=ww_4c5698093e19b"
-        ></script>
-        <div id="root"></div>
         <script type="module" src="/src/main.tsx"></script>
     </body>
 </html>

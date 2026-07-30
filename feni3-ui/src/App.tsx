@@ -6,7 +6,7 @@ export default function App() {
     const [info, setInfo] = useState({
         train: "moment...",
         bus: "moment...",
-        joke: "moment...",
+        joke: "aSDASda A da DS asd asd as dda aSDas asD asdsd das da sd asd as DAS ads asdas ad sa as..",
         xkcd_image: image404,
     });
 
@@ -35,8 +35,8 @@ export default function App() {
     }, []);
 
     return (
-        <div className="p-5 bg-yellow-100 w-screen h-screen flex flex-col justify-start items-center">
-            <div className="w-full flex flex-row justify-evenly">
+        <div className="p-5 bg-yellow-100 w-screen h-full flex flex-row justify-around items-center">
+            <div className="h-full flex flex-col justify-around">
                 <div className="m-5 p-5 h-fit  bg-blue-300 rounded-2xl">
                     <p className="text-center text-2xl underline font-bold">
                         Z&uuml;ge
@@ -44,7 +44,7 @@ export default function App() {
                     <br />
                     <pre className="">{info.train}</pre>
                 </div>
-                <div className="m-5 p-5 h-fit  bg-blue-300 rounded-2xl">
+                <div className="m-5 p-5 h-fit bg-blue-300 rounded-2xl">
                     <p className="text-center text-2xl underline font-bold">
                         Busse
                     </p>
@@ -52,15 +52,15 @@ export default function App() {
                     <pre className="">{info.bus}</pre>
                 </div>
             </div>
-            <div className="w-full flex flex-row justify-evenly">
-                <div className="m-5 p-5 h-fit  bg-red-300 rounded-2xl">
+            <div className="h-full flex flex-col justify-around items-center">
+                <div className="m-5 p-5 h-fit w-10/12 bg-red-300 rounded-2xl">
                     <p className="text-center text-2xl underline font-bold">
                         Witz
                     </p>
                     <br />
-                    <pre className="">{info.joke}</pre>
+                    <pre className="whitespace-pre-wrap">{info.joke}</pre>
                 </div>
-                <div className="m-5 p-5 h-fit  bg-red-300 rounded-2xl">
+                <div className="m-5 p-5 h-fit w-fit bg-orange-300 rounded-2xl">
                     <p className="text-center text-2xl underline font-bold">
                         xkcd
                     </p>
