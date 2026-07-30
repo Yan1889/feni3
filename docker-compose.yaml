@@ -1,13 +1,11 @@
 services:
     feni-api:
-        platform: linux/x86_64
         build: feni3-api/
         image: yan1889/feni-aws-api
         container_name: feni-api
         ports: ["8080:8080"]
     nginx:
-        platform: linux/x86_64
         build: feni3-ui/
         image: yan1889/feni-aws-gateway
-        container_name: nginx
+        container_name: feni-nginx
         ports: ["80:80"]
