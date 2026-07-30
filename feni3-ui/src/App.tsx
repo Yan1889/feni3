@@ -37,14 +37,14 @@ export default function App() {
     return (
         <div className="p-5 bg-yellow-100 w-screen h-full flex flex-row justify-around items-center">
             <div className="h-full flex flex-col justify-around">
-                <div className="m-5 p-5 h-fit bg-blue-300 rounded-2xl">
+                <div className="p-5 h-fit bg-blue-300 rounded-2xl shadow-black shadow-2xl">
                     <p className="text-center text-2xl underline font-bold">
                         Z&uuml;ge
                     </p>
                     <br />
                     <pre className="">{info.train}</pre>
                 </div>
-                <div className="m-5 p-5 h-fit bg-blue-300 rounded-2xl">
+                <div className="p-5 h-fit bg-blue-300 rounded-2xl shadow-black shadow-2xl">
                     <p className="text-center text-2xl underline font-bold">
                         Busse
                     </p>
@@ -53,20 +53,20 @@ export default function App() {
                 </div>
             </div>
             <div className="h-full flex flex-col justify-around items-center">
-                <div className="m-5 p-5 h-fit bg-red-300 rounded-2xl">
+                <div className="p-5 h-fit bg-red-300 rounded-2xl shadow-black shadow-2xl">
                     <p className="text-center text-2xl underline font-bold">
                         Witz
                     </p>
                     <br />
                     <pre className="whitespace-pre-wrap">{info.joke}</pre>
                 </div>
-                <div className="m-5 p-5 h-1/2 w-fit bg-orange-300 rounded-2xl">
+                <div className="p-5 h-1/2 w-fit bg-orange-300 rounded-2xl shadow-black shadow-2xl">
                     <p className="text-center text-2xl underline font-bold">
                         xkcd
                     </p>
                     <br />
                     <img
-                        className="h-3/4"
+                        className="max-w-[50svw] max-h-[30svh]"
                         src={info.xkcd_image}
                         alt="xkcd image"
                     />
