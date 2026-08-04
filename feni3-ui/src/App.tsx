@@ -43,7 +43,9 @@ export default function App() {
                             Z&uuml;ge
                         </p>
                         <br className="hidden md:inline" />
-                        <pre className="text-xs md:text-sm">{info.train}</pre>
+                        <pre className="text-[7px] md:text-sm whitespace-pre-wrap">
+                            {info.train}
+                        </pre>
                     </div>
                 </div>
                 <div className="flex-1 flex justify-center items-center p-1 bg-yellow-600">
@@ -52,7 +54,9 @@ export default function App() {
                             Busse
                         </p>
                         <br className="hidden md:inline" />
-                        <pre className="text-xs md:text-sm">{info.bus}</pre>
+                        <pre className="text-[7px] md:text-sm whitespace-pre-wrap">
+                            {info.bus}
+                        </pre>
                     </div>
                 </div>
             </div>
@@ -63,7 +67,7 @@ export default function App() {
                             Witz
                         </p>
                         <br className="hidden md:inline" />
-                        <pre className="text-xs md:text-sm whitespace-pre-wrap">
+                        <pre className="text-[7px] md:text-sm whitespace-pre-wrap">
                             {info.joke}
                         </pre>
                     </div>
