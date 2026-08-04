@@ -35,43 +35,51 @@ export default function App() {
     }, []);
 
     return (
-        <div className="p-5 bg-yellow-100 w-screen h-full flex flex-col md:flex-row justify-around items-center">
-            <div className="h-full flex flex-col justify-around">
-                <div className="p-5 h-fit bg-blue-300 rounded-2xl shadow-black shadow-2xl">
-                    <p className="hidden md:block text-center text-2xl underline font-bold">
-                        Z&uuml;ge
-                    </p>
-                    <br />
-                    <pre className="">{info.train}</pre>
+        <>
+            <div className="flex-1 flex flex-col">
+                <div className="flex-1 flex justify-center items-center bg-yellow-500">
+                    <div className="w-fit h-fit p-5 rounded-2xl bg-green-400">
+                        <p className="text-center text-2xl underline font-bold">
+                            Z&uuml;ge
+                        </p>
+                        <br />
+                        <pre className="">{info.train}</pre>
+                    </div>
                 </div>
-                <div className="p-5 h-fit bg-blue-300 rounded-2xl shadow-black shadow-2xl">
-                    <p className="hidden md:block text-center text-2xl underline font-bold">
-                        Busse
-                    </p>
-                    <br />
-                    <pre className="">{info.bus}</pre>
-                </div>
-            </div>
-            <div className="h-full flex flex-col justify-around items-center">
-                <div className="p-5 h-fit bg-red-300 rounded-2xl shadow-black shadow-2xl">
-                    <p className="hidden md:block text-center text-2xl underline font-bold">
-                        Witz
-                    </p>
-                    <br />
-                    <pre className="whitespace-pre-wrap">{info.joke}</pre>
-                </div>
-                <div className="hidden md:block p-5 h-1/2 max-h-30 w-fit bg-orange-300 rounded-2xl shadow-black shadow-2xl">
-                    <p className="text-center text-2xl underline font-bold">
-                        xkcd
-                    </p>
-                    <br />
-                    <img
-                        className="max-w-svw md:max-w-[50svw] max-h-25 md:max-h-[30svh]"
-                        src={info.xkcd_image}
-                        alt="xkcd image"
-                    />
+                <div className="flex-1 flex justify-center items-center bg-yellow-600">
+                    <div className="w-fit h-fit p-5 rounded-2xl bg-green-400">
+                        <p className="text-center text-2xl underline font-bold">
+                            Busse
+                        </p>
+                        <br />
+                        <pre className="">{info.bus}</pre>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div className="flex-1 flex flex-col">
+                <div className="flex-1 flex justify-center items-center bg-red-200">
+                    <div className="w-fit h-fit p-5 rounded-2xl bg-green-400">
+                        <p className="text-center text-2xl underline font-bold">
+                            Witz
+                        </p>
+                        <br />
+                        <pre className="whitespace-pre-wrap">{info.joke}</pre>
+                    </div>
+                </div>
+                <div className="flex-1 flex justify-center items-center bg-red-700">
+                    <div className="w-fit h-fit p-5 rounded-2xl bg-green-400">
+                        <p className="text-center text-2xl underline font-bold">
+                            xkcd
+                        </p>
+                        <br />
+                        <img
+                            className="max-w-full max-h-[30vh] object-contain"
+                            src={info.xkcd_image}
+                            alt="xkcd image"
+                        />
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }
