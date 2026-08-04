@@ -57,7 +57,7 @@ export default function App() {
                 </div>
             </div>
             <div className="flex-1 flex flex-col">
-                <div className="flex-1 flex justify-center items-center bg-red-200">
+                <div className="flex-1 flex justify-center items-center bg-red-400">
                     <div className="w-fit h-fit p-5 rounded-2xl bg-green-400">
                         <p className="text-center text-2xl underline font-bold">
                             Witz
