@@ -37,43 +37,45 @@ export default function App() {
     return (
         <>
             <div className="flex-1 flex flex-col">
-                <div className="flex-1 flex justify-center items-center bg-yellow-500">
-                    <div className="w-fit h-fit p-5 rounded-2xl bg-green-400">
-                        <p className="text-center text-2xl underline font-bold">
+                <div className="flex-1 flex justify-center items-center p-1 bg-yellow-500">
+                    <div className="w-fit h-fit p-1 md:p-5 rounded-md md:rounded-2xl bg-green-400">
+                        <p className="hidden md:block text-center text-2xl underline font-bold">
                             Z&uuml;ge
                         </p>
-                        <br />
-                        <pre className="">{info.train}</pre>
+                        <br className="hidden md:inline" />
+                        <pre className="text-xs md:text-sm">{info.train}</pre>
                     </div>
                 </div>
-                <div className="flex-1 flex justify-center items-center bg-yellow-600">
-                    <div className="w-fit h-fit p-5 rounded-2xl bg-green-400">
-                        <p className="text-center text-2xl underline font-bold">
+                <div className="flex-1 flex justify-center items-center p-1 bg-yellow-600">
+                    <div className="w-fit h-fit p-1 md:p-5 rounded-md md:rounded-2xl bg-green-400">
+                        <p className="hidden md:block text-center text-2xl underline font-bold">
                             Busse
                         </p>
-                        <br />
-                        <pre className="">{info.bus}</pre>
+                        <br className="hidden md:inline" />
+                        <pre className="text-xs md:text-sm">{info.bus}</pre>
                     </div>
                 </div>
             </div>
             <div className="flex-1 flex flex-col">
-                <div className="flex-1 flex justify-center items-center bg-red-400">
-                    <div className="w-fit h-fit p-5 rounded-2xl bg-green-400">
-                        <p className="text-center text-2xl underline font-bold">
+                <div className="flex-1 flex justify-center items-center p-1 bg-red-400">
+                    <div className="w-fit h-fit p-1 md:p-5 rounded-md md:rounded-2xl bg-green-400">
+                        <p className="hidden md:block text-center text-2xl underline font-bold">
                             Witz
                         </p>
-                        <br />
-                        <pre className="whitespace-pre-wrap">{info.joke}</pre>
+                        <br className="hidden md:inline" />
+                        <pre className="text-xs md:text-sm whitespace-pre-wrap">
+                            {info.joke}
+                        </pre>
                     </div>
                 </div>
-                <div className="flex-1 flex justify-center items-center bg-red-700">
-                    <div className="w-fit h-fit p-5 rounded-2xl bg-green-400">
-                        <p className="text-center text-2xl underline font-bold">
+                <div className="flex-1 flex justify-center items-center p-1 bg-red-700">
+                    <div className="w-fit h-fit p-1 md:p-5 rounded-md md:rounded-2xl bg-green-400">
+                        <p className="hidden md:block text-center text-2xl underline font-bold">
                             xkcd
                         </p>
-                        <br />
+                        <br className="hidden md:inline" />
                         <img
-                            className="max-w-full max-h-[30vh] object-contain"
+                            className="max-w-full max-h-[15vh] md:max-h-[30vh] object-contain"
                             src={info.xkcd_image}
                             alt="xkcd image"
                         />
